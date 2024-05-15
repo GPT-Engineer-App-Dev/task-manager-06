@@ -1,5 +1,4 @@
 console.log("Index.jsx file is being read");
-console.log("File is being read");
 import { useState } from "react";
 import { Container, VStack, HStack, Input, Button, Text, Checkbox, IconButton } from "@chakra-ui/react";
 import { FaTrash } from "react-icons/fa";
@@ -10,7 +9,6 @@ const Index = () => {
 
   const addTask = () => {
     console.log("addTask function is being called");
-    console.log("addTask function is being called");
     if (newTask.trim() !== "") {
       setTasks([...tasks, { text: newTask, completed: false }]);
       setNewTask("");
@@ -19,13 +17,11 @@ const Index = () => {
 
   const deleteTask = (index) => {
     console.log("deleteTask function is being called");
-    console.log("deleteTask function is being called");
     const newTasks = tasks.filter((_, i) => i !== index);
     setTasks(newTasks);
   };
 
   const toggleTaskCompletion = (index) => {
-    console.log("toggleTaskCompletion function is being called");
     console.log("toggleTaskCompletion function is being called");
     const newTasks = tasks.map((task, i) =>
       i === index ? { ...task, completed: !task.completed } : task
